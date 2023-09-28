@@ -1,0 +1,48 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import AboutMe from "../components/AboutMe.astro";
+import "../styles/styles.css";
+import ProjectList from "../components/ProjectList.astro";
+import GetInTouch from "../components/GetInTouch.astro";
+import CodingCareer from "../components/CodingCareer.astro";
+import BulletPoints from "../components/BulletPoints.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Mariano Fonseca (Portfolio)</title>
+  </head>
+  <body class="w-screen h-full grid overflow-x-hidden bg-background text-text">
+    <Navbar />
+    <Header />
+    <main class="mx-4 md:mx-32">
+      <AboutMe />
+      <CodingCareer />
+      <BulletPoints />
+      <ProjectList />
+      <GetInTouch />
+    </main>
+    <Footer />
+    <script>
+      import OnViewTransition from "../utils/OnViewTransition";
+      const aboutMeText = document.querySelector("#aboutMeText") as HTMLElement;
+      const codingCareerText = document.querySelector("#codingCareerText");
+      const bulletPointOne = document.querySelector("#bulletPointOne");
+      const bulletPointTwo = document.querySelector("#bulletPointTwo");
+      const bulletPointThree = document.querySelector("#bulletPointThree");
+      OnViewTransition([
+        aboutMeText,
+        codingCareerText,
+        bulletPointOne,
+        bulletPointTwo,
+        bulletPointThree,
+      ]);
+    </script>
+  </body>
+</html>

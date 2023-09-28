@@ -1,0 +1,49 @@
+---
+const { id, title, image, lenguajes, link, description } = Astro.props;
+import { Image } from "astro:assets";
+import ExternalLink from "../assets/icons/external-link.svg";
+---
+
+<div
+  id={id}
+  class="w-full shadow-sm group pb-10 relative hover:shadow-2xl hover:shadow-gray-800 transition-all border-[1px] rounded-sm border-black bg-background overflow-hidden"
+>
+  <a target="_blank" href={link}>
+    <div
+      class="absolute group-hover:top-0 transition-all duration-500 -top-24 grid w-full justify-center"
+    >
+      <div
+        class="flex rounded-b-lg text-black bg-white py-4 px-2 gap-x-1 items-center"
+      >
+        <h4>Click to open project</h4>
+        <Image
+          class="w-5 h-5"
+          src={ExternalLink}
+          alt="Logo to add tab about the specic project in mariano Fonseca is porfolio"
+        />
+      </div>
+    </div>
+    <img
+      src={image}
+      alt={title}
+      class="w-full group-hover:opacity-100 transition-all opacity-40"
+    />
+  </a>
+  <div class="px-6 my-6 flex flex-col flex-grow">
+    <h1 class="text-5xl md:text-4xl mb-2 font-semibold transition-all">
+      {title}
+    </h1>
+    <p class="text-text text-2xl md:text-base">
+      {description}
+    </p>
+    <div class="flex absolute bottom-4 space-x-2">
+      {
+        lenguajes.map((lenguaje) => (
+          <span class="px-10 text-base md:text-sm  py-1 bg-bgButton text-text font-medium ">
+            {lenguaje}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</div>

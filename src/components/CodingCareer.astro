@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import LenguajesImage from "../assets/images/Lenguajes.svg";
+import Coding from "../assets/icons/Coding.svg";
+---
+
+<div
+  class="grid justify-items-center mt-24 md:flex md:grid-flow-col gap-y-12 md:gap-x-12 items-center"
+>
+  <Image
+    src={LenguajesImage}
+    class="rounded-xl shadow-slate-500 w-96 h-96"
+    width={700}
+    height={700}
+    alt="Image of mariano Fonseca in his porfolio"
+  />
+  <div id="codingCareerText">
+    <h1 class="titleSection flex items-center border-primary">
+      My Coding Career <span class="ml-2"
+        ><Image src={Coding} alt="sadkaosdj" /></span
+      >
+    </h1>
+    <p class="opacity-90 md:text-2xl text-3xl mt-6">
+      I embarked on my coding journey at the tender age of 9, and now, at 18,
+      I've amassed nine years of hands-on coding experience. My proficiency in
+      JavaScript is unparalleled, having honed my skills over the years to craft
+      captivating, user-centric web interfaces. I've had the privilege of
+      contributing to substantial projects for various companies, a testament to
+      my ability to thrive inS high-stakes environments.
+    </p>
+    <p class="opacity-90 text-3xl md:text-2xl mt-2">
+      Furthermore, I've bolstered my expertise with a collection of
+      certifications from renowned companies like Google and others, each
+      tailored to enhance my skills in web development. With a robust command of
+      43 programming languages, libraries, and frameworks, I am well-equipped to
+      tackle a diverse range of coding challenges
+    </p>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+---
+import "../styles/styles.css";
+
+import { Image } from "astro:assets";
+import MarianoFonsecaImage from "../assets/images/MarianoFonseca.jpg";
+import PersonIcon from "../assets/icons/Person.astro";
+---
+
+<section id="aboutMe" class="section">
+  <div
+    class="grid justify-items-center mt-24 md:flex md:grid-flow-col gap-y-12 md:gap-x-24 items-center"
+  >
+    <Image
+      src={MarianoFonsecaImage}
+      class="rounded-xl block md:hidden shadow-slate-500 shadow-lg"
+      width={400}
+      height={400}
+      alt="Image of mariano Fonseca in his porfolio"
+    />
+    <div id="aboutMeText">
+      <h1 class="titleSection flex items-center border-primary">
+        About me <span class="ml-2"><PersonIcon /></span>
+      </h1>
+      <p class="opacity-80 md:text-2xl text-3xl mt-6">
+        I am from Argentina, but during my sophomore year my journey took me to
+        The Linsly School, a boarding high school in the United States. At
+        Linsly, I've thrived both academically and athletically. I proudly hold
+        the titles of varsity soccer player, varsity swimmer, and team captain.
+        While excelling in sports and maintaining a strong academic record, my
+        true passion lies in programming. As a front-end developer, I've honed
+        my skills to create engaging and user-friendly websites, making
+        technology accessible and enjoyable for users.
+      </p>
+    </div>
+    <Image
+      src={MarianoFonsecaImage}
+      class="rounded-xl hidden md:block shadow-slate-500 shadow-lg"
+      width={400}
+      height={400}
+      alt="Image of mariano Fonseca in his porfolio"
+    />
+  </div>
+</section>

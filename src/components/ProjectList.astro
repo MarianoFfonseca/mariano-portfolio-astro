@@ -1,0 +1,57 @@
+---
+import Project from "./Project.astro";
+import BracketsIcon from "../assets/icons/Brackets.svg";
+import { Image } from "astro:assets";
+const projectList = [
+  {
+    id: 1,
+    title: "Get-The-Box",
+    lenguajes: ["React Js", "Stripe", "Firebase", "Tailwind Css"],
+    image: "/get-the-box.png",
+    description:
+      "An application with real time transactions, where you pay 1 dollar to post a photo and it will remain there until another user pays to post a photo.",
+    link: "https://64d1a9ab6472681d89dbdac8--getthebox.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "KKKKK-Ecomerce",
+    lenguajes: ["Sanity", "Stripe", "Redux", "Tailwind Css"],
+    image: "/kkkkk-page.png",
+    description:
+      "A fully functional ecommerce application, using paypal to process transactions and all products are stored in the database in sanity, plus cart functionality with global status.",
+    link: "https://kkkkk-six.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Modern-Lottery",
+    lenguajes: ["React Js", "Ether Js", "Firebase", "Redux"],
+    image: "/modern-lottery.png",
+    description:
+      "Modern lottery is the most complete application that I developed, here I apply all the knowledge of cryptocurrencies and program a blockchain to make transactions in etherum, here you bet when for you will be the value of a certain crypto in the next months.",
+    link: "https://ahorasi-88a02.web.app/",
+  },
+  {
+    id: 4,
+    title: "Todo-List-App",
+    lenguajes: ["Typescript", "React Context", "Tailwind Css"],
+    image: "todo-list.png",
+    description:
+      "This is a simple application to show my knowledge of typescript and react, just a normal todo-list, using react context to play with a global state.",
+    link: "https://github.com/MarianoFfonseca/todo-app-typescript",
+  },
+];
+---
+
+<section class="section mt-24">
+  <h1 class="titleSection flex items-center border-primary">
+    Some projects <span class="ml-4">
+      <Image
+        src={BracketsIcon}
+        alt="Icon of project of Marinao Fonseca"
+      /></span
+    >
+  </h1>
+  <div class="projectList w-full grid grid-cols-1 md:grid-cols-2 mt-10 gap-5">
+    {projectList.map((item) => <Project {...item} />)}
+  </div>
+</section>

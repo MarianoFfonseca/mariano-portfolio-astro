@@ -1,0 +1,37 @@
+---
+import Github from "../assets/icons/Github.astro";
+import Mail from "../assets/icons/Mail.astro";
+import Phone from "../assets/icons/Phone.astro";
+---
+
+<section
+  id="contact"
+  class="grid justify-center justify-items-center mt-24 mb-24"
+>
+  <h1 class="titleSection text-center px-12 border-primary">Get in touch</h1>
+  <div class="flex mt-10 space-x-6 [&>button]:flex [&>button]:items-center">
+    <a
+      target="_blank"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=mariano.fonseca@linsly.org"
+      class="flex group bg-bgButton md:px-12 py-4 px-16 md:py-3 rounded-full hover:bg-hovBgBtn transition-colors text-lg"
+    >
+      <Mail class="" />
+      Email</a
+    >
+    <a
+      target="_blank"
+      href="https://github.com/MarianoFfonseca/"
+      class="flex group bg-bgButton md:px-12 py-4 px-16 md:py-3 rounded-full hover:bg-hovBgBtn transition-colors text-lg"
+    >
+      <Github />Github
+      <a
+        target="_blank"
+        href="tel:304-830-7099"
+        class="flex group bg-bgButton md:px-12 py-4 px-16 md:py-3 rounded-full hover:bg-hovBgBtn transition-colors text-lg"
+      >
+        <Phone />
+        Phone</a
+      >
+    </a>
+  </div>
+</section>

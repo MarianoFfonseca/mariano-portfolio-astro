@@ -1,0 +1,37 @@
+---
+import "../styles/styles.css";
+import Arrow from "../assets/icons/Arrow.astro";
+---
+
+<header
+  class="relative w-full h-[200vh] md:h-screen grid text-center content-center justify-items-center gap-4"
+>
+  <div class="bg-gray-900 h-64 w-64 grid rounded-2xl justify-items-center">
+    <img
+      id="MarianoImage"
+      class="h-[300px] -mt-[40px]"
+      src="/mariano-picture.png"
+      alt="Image of Mariano in his portfolio"
+    />
+  </div>
+
+  <h1 class="font-bold m-0 p-0 text-6xl md:text-[80px]" id="headerTitle">
+    Full stack <span></span> web developer
+  </h1>
+  <div class="buttons flex gap-x-4">
+    <a
+      href="#aboutMe"
+      class="bg-bgButton px-12 py-3 rounded-full hover:bg-hovBgBtn transition-colors text-lg"
+      >about me</a
+    >
+    <a
+      href="#contact"
+      class="bg-bgButton px-12 py-3 rounded-full hover:bg-hovBgBtn transition-colors text-lg"
+      >get in touch</a
+    >
+  </div>
+
+  <span class="headerSvg [&>svg]:rotate-90 [&>svg]:w-12 [&>svg]:h-12">
+    <Arrow />
+  </span>
+</header>

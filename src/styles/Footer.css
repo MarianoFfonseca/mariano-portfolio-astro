@@ -1,0 +1,21 @@
+footer {
+  width: 100vw;
+  padding: 50px 170px;
+  display: flex;
+  justify-content: space-between;
+}
+footer > a {
+  font-size: 30px;
+  width: 100%;
+}
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+footer > ul > li {
+  font-size: 15px;
+  list-style: none;
+  margin-right: 20px;
+}
